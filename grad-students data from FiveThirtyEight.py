@@ -9,7 +9,7 @@ grad_students = pd.read_csv("/Users/Harish/Documents/HK_Work/Machine Learning/fi
 
 sorted_desc_grad_total = grad_students.sort_values(by='Grad_total',ascending=0)
 
-#print(sorted_desc_grad_total.head())
+print(sorted_desc_grad_total.Major)
 
 # sns.FacetGrid(sorted_desc_grad_total.head(n=10),hue="Major")\
 # .map(plt.bar,"Major_code","grad_studentstotal")\
@@ -18,4 +18,4 @@ sorted_desc_grad_total = grad_students.sort_values(by='Grad_total',ascending=0)
 # #plt.tight_layout()
 # plt.show()
 
-sns.boxplot(sorted_desc_grad_total,Major_code)
+sns.barplot(x="Major",y="grad_studentstotal",hue="grad_sutdents.Major")
